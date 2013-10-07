@@ -1,0 +1,22 @@
+{
+  "name": "CAChaCa",
+  "description": "a Chrome App for ChromeCast",
+  "version": "0.1",
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self';  media-src 'self' youtube.com",
+  "permissions": [
+    "webview",
+    "experimental",
+    {"socket": [
+      "tcp-connect",
+      "tcp-listen",
+      "udp-bind",
+      "udp-send-to",
+      "udp-multicast-membership"]}],
+
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+}
